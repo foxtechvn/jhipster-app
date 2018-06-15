@@ -6,7 +6,7 @@
     <artifactId>app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>App</name>
+    <name>App on H2</name>
 
     <properties>
         <!-- Build properties -->
@@ -157,7 +157,6 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.jayway.jsonpath</groupId>
@@ -196,10 +195,6 @@
         <dependency>
             <groupId>javax.cache</groupId>
             <artifactId>cache-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mariadb.jdbc</groupId>
-            <artifactId>mariadb-java-client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.assertj</groupId>
@@ -556,7 +551,7 @@
                 -->
                 <configuration>
                     <repository>app</repository>
-                    <tag>latest</tag>
+                    <tag>h2</tag>
                     <contextDirectory>${project.build.directory}</contextDirectory>
                 </configuration>
             </plugin>
